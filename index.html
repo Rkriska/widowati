@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! - Untuk Kakak Tersayang</title>
+    <meta name="description" content="Ucapan spesial ulang tahun untuk kakak tersayang">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Happy Birthday! - Untuk Kakak Tersayang">
+    <meta property="og:description" content="Ucapan spesial ulang tahun untuk kakak tersayang">
+    <meta property="og:type" content="website">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/hbd.png">
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" src="./music/monokrom.mp3" preload="auto"></audio>
+
+    <!-- Floating Elements -->
+    <div class="balloon floating"></div>
+    <div class="balloon floating"></div>
+    <div class="balloon floating"></div>
+    <div class="balloon floating"></div>
+
+    <div class="bg" id="content">
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-container animate__animated animate__fadeIn">
+            <div class="start-card">
+                <h1 class="start-title">🎉 Happy late Birthday! 🎉</h1>
+                <p class="start-subtitle">Khusus untuk <span id='birthdayName'>Ma sis</span></p>
+                <button id="startBtn" class="btn btn-start animate__animated animate__pulse animate__infinite">
+                    <i class="fas fa-play-circle"></i> Lesssgoo!!
+                </button>
+                <p class="start-hint">Klik atas!</p>
+            </div>
+        </div>
+
+        <!-- Slide 1: Gambar HBD -->
+        <div id="slideSatu" class="animate__animated animate__slideInDown animate__slow d-none">
+            <img src="./img/hbd1.png" class="img" alt="Happy Birthday" loading="lazy">
+        </div>
+
+        <!-- Slide 2: Pesan 1 -->
+        <div id="slideDua" class="slides d-none paper animate__zoomInDown animate__animated animate__delay-1s animate__slow">
+            <div class="paper-content">
+                <p id="teks1" class="teks"></p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Pesan 2 -->
+        <div id="slideTiga" class="slides d-none paper animate__fadeInRight animate__animated animate__delay-1s">
+            <div class="paper-content">
+                <p id="teks2" class="teks"></p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Pertanyaan -->
+        <div class="kotak d-none slides animate__animated animate__fadeInDown animate__delay-1s" id="slideEmpat">
+            <div class="row">
+                <div class="col-sm mt-1">
+                    <h5>Make a wish dlu dong</h5>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-4 offset-2">
+                    <button id="gak" class="btn btn-outline-danger"> oke udah! </button>
+                </div>
+                <div class="col-4">
+                    <button id="suka" class="btn btn-outline-info"> amiinnn </button>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 5: Hati -->
+        <div id="slideLima" class="d-none animate__bounceIn animate__animated animate__slow">
+            <i class="fas fa-heart fa-5x text-danger"></i>
+        </div>
+        <p id="trims" class="text-muted d-none mt-2"></p>
+
+        <!-- Slide 6: Galeri Foto -->
+        <div id="slideEnam" class="d-none animate__animated animate__fadeIn">
+            <div class="gallery-container">
+                <h3 class="gallery-title">Next kalo main butuh dokum banyak deh</h3>
+                <div class="gallery-grid">
+                    <div class="photo-card animate__animated animate__zoomIn">
+                        <div class="photo-wrapper">
+                            <img src="img/Withkakwido3.jpg" alt="Foto 1" class="gallery-img" loading="lazy">
+                        </div>
+                        <div class="photo-caption">dump</div>
+                    </div>
+                    <div class="photo-card animate__animated animate__zoomIn animate__delay-1s">
+                        <div class="photo-wrapper">
+                            <img src="img/ferry.png" alt="Foto 2" class="gallery-img" loading="lazy">
+                        </div>
+                        <div class="photo-caption">When ya ? </div>
+                    </div>
+                    <div class="photo-card animate__animated animate__zoomIn animate__delay-2s">
+                        <div class="photo-wrapper">
+                            <img src="" alt="Foto 3" class="gallery-img" loading="lazy">
+                        </div>
+                        <div class="photo-caption">Petualangan Seru</div>
+                    </div>
+                </div>
+                <button id="nextBtn" class="btn btn-primary mt-3">
+                    <i class="fas fa-forward"></i> Lanjutkan
+                </button>
+            </div>
+        </div>
+
+        <!-- Slide 7: Pesan Akhir -->
+        <div id="slideTujuh" class="d-none animate__animated animate__fadeInUp">
+            <div class="final-message">
+                <h2 class="final-title">Terima Kasih Telah Menjadi Bagian Curhatku :)))))</h2>
+                <p class="final-text"> Btw kemarin ferry irwandy ke UGM !</p>
+                <div class="final-hearts">
+                    <i class="fas fa-heart text-danger"></i>
+                    <i class="fas fa-heart text-primary"></i>
+                    <i class="fas fa-heart text-success"></i>
+                    <i class="fas fa-heart text-warning"></i>
+                    <i class="fas fa-heart text-info"></i>
+                </div>
+                <button id="restartBtn" class="btn btn-success mt-4">
+                    <i class="fas fa-redo"></i> Lihat Lagi
+                </button>
+            </div>
+        </div>
+
+        <!-- Tap Indicator -->
+        <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__infinite">Klik di mana saja untuk melanjutkan</p>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small blue fixed-bottom d-none" id="footer">
+            <div class="footer-copyright text-center py-3">
+                <span class="text-muted">Dibuat dengan ❤️ untuk ulang tahunmu</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.js"></script>
+    <script src="https://kit.fontawesome.com/61e5120832.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
