@@ -141,7 +141,7 @@ function showSlideDua() {
     // TypeIt untuk pesan pertama
     new TypeIt("#teks1", {
         strings: [
-            "Happy late birthday kak yang ke __!!",
+            "Happy late birthday kak !!",
             "List doa ku sholat jumat ini",
             "Semoga kakak selalu diberikan kesehatan mental dan fisik ",
             "Semoga Tajir konglo ampe 7 turunan",
@@ -168,7 +168,7 @@ function showSlideTiga() {
     new TypeIt("#teks2", {
         strings: [
             "PLIS SURVIVE YA DI KALIMANTAN ",
-            "barakallah fi umrik, jan bosen bosen ke jogja fak.",
+            "jan bosen bosen ke jogja fak.",
             "Wish all you the best",
             "- 0823136647**"
         ],
